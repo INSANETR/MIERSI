@@ -1,0 +1,39 @@
+1.
+X | Y | X xor Y
+1 | 1 |    0
+0 | 1 |    1
+1 | 0 |    1
+0 | 0 |    0
+
+soma dos produtos:
+Y = !AB + A!B
+
+a)
+(feito no limnu)
+
+b)
+(feito no limnu)
+
+2.
+f = !WX!YZ + !W!X!YZ + W!X!YZ + WX!YZ
+
+a.
+!WX!YZ + !W!X!YZ + W!X!YZ + WX!YZ
+= !W!YZ(X + !X) + W!YZ(!X + X)
+= !W!YZ(1) + W!YZ(1)
+= !W!YZ + W!YZ
+= !YZ(!W + W)
+= !YZ(1)
+= !YZ
+
+b.
+(feito no limnu)
+
+3.
+(feito em limnu)
+
+4.
+(feito no limnu)
+
+5.
+(feito no limnu)

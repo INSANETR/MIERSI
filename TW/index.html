@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+
+        <meta charset = "UTF-8">
+
+        <title>Othello - The Game</title>
+
+        <link rel = "stylesheet" href = "Othello.css">
+        
+        <script src = "OnlineOthello.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id = "topBar">
+
+            <form id = "loginForm">
+
+                <input type = "text" class = "loginSlots" id = "nickSlot" placeholder = "NickName">
+                
+                <input type = "password" class ="loginSlots" id = "passSlot" placeholder = "PassWord">
+
+                <input type = "button" class = "logButtons" id = "loginButton" value = "Login" onclick = "login();">
+
+            </form>
+
+            <input type = "button" class = "logButtons" id = "logoutButton" value = "Logout" onclick = "logout();">
+
+        </div>
+
+        <div id = "sideBar">
+
+            <div id = "logo">
+
+                <div id = "logoText">OTHELLO</div>
+
+                <!-- botões da sideBar -->
+
+            </div>
+
+        </div>
+
+        <div id = "gameRoot"></div>
+
+        <div class = "popUps" id = "settingsPopUp">
+
+            <button id = "startButton" onclick = "closeSettingsPopUp();">START</button>
+
+        </div>
+
+        <div class = "popUps" id = "playerTurnPopUp">
+
+            <button id = "playPassButton" onclick = "closePlayerTurnPopUp();"></button>
+
+        </div>
+
+        <div class = "popUps" id = "playPassButtonBlockerPopUp"></div>
+
+        <div id = "slotsContainer">
+
+            <div class = "countSlot" id = "lightCountSlot"></div>
+
+            <div class = "countSlot" id = "emptyCountSlot"></div>
+
+            <div class = "countSlot" id = "darkCountSlot"></div>
+
+            <div class = "bigSlot" id = "gameSlot"></div>
+
+            <div class = "bigSlot" id = "errorSlot"></div>
+
+        </div>
+
+    </body>
+
+</html>

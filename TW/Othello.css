@@ -1,0 +1,231 @@
+body {
+    background-color: silver;
+}
+
+#topBar {
+    position: fixed;
+    top: 0px;
+    left: 150px;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+.loginSlots {
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    width: 190px;
+    padding: 0px;
+    border-width: 0px;
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#nickSlot {
+    left: 0px;
+}
+
+#passSlot {
+    left: 195px;
+}
+
+.logButtons {
+    position: absolute;
+    top: 0px;
+    height: 40px;
+    width: 90px;
+    padding: 0px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: silver;
+    margin: 5px;
+    font-size: 15px;
+    background-color: gainsboro;
+}
+
+.logButtons:hover {
+    cursor: pointer;
+    border-width: 0px;
+    background-color: silver;
+}
+
+#loginButton {
+    left: 390px;
+}
+
+#logoutButton {
+    display: none;
+    right: 150px;
+}
+
+#sideBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 150px;
+    background-color: black;
+}
+
+#logo {
+    position: absolute;
+    height: 40px;
+    width: 140px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: silver;
+    background-color: black;
+}
+
+#logoText {
+    position: absolute;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5px 10px 5px 10px;
+    color: silver;
+}
+
+.panel {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    height: 845px;
+    width: 845px;
+    margin: 50px;
+    background-color: black;
+}
+
+.cell {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
+.disk {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 50%;
+    border-color: green;
+}
+
+.popUps {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    height: 835px;
+    width: 845px;
+    margin: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: silver;
+    display: none;
+}
+
+#playPassButtonBlockerPopUp {
+    opacity: 0;
+}
+
+#startButton {
+    position: absolute;
+    top: 525px;
+    left: 105px;
+    height: 215px;
+    width: 635px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    text-align: center;
+    font-size: 100px;
+    color: silver;
+    background-color: green;
+}
+
+#startButton:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#playPassButton {
+    position: absolute;
+    top: 315px;
+    left: 105px;
+    height: 215px;
+    width: 635px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    text-align: center;
+    font-size: 100px;
+    color: silver;
+    background-color: green;
+}
+
+#playPassButton:hover {
+    cursor: pointer;
+    color: black;
+}
+
+#slotsContainer {
+    position: absolute;
+    top: 50px;
+    left: 1045px;
+    height: 845px;
+    width: 800px;
+    margin: 50px;
+    background-color: black;
+}
+
+.countSlot {
+    position: absolute;
+    top: 5px;
+    height: 275px;
+    width: 260px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 225px;
+    background-color: silver;
+}
+
+.bigSlot {
+    position: absolute;
+    left: 5px;
+    height: 200px;
+    width: 790px;
+    padding-top: 75px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 75px;
+    color: black;
+    background-color: silver;
+}
+
+#lightCountSlot {
+    left: 5px;
+    color: white;
+}
+
+#emptyCountSlot {
+    left: 270px;
+    color: green;
+}
+
+#darkCountSlot {
+    left: 535px;
+    color: black;
+}
+
+#gameSlot {
+    top: 285px;
+}
+
+#errorSlot {
+    top: 565px;
+}

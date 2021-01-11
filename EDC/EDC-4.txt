@@ -1,0 +1,106 @@
+1.
+a)
+A + AB
+= A(1 + B)
+= A(1)
+= A
+
+b)
+A(A + B)
+= AA + AB
+= A + AB
+= A(1 + B)
+= A(1)
+= A
+
+c)
+(A + B)(A + C)
+= A ? (B ? C)
+= A + (B * C)
+= A + (BC)
+
+d)
+A + (!A)B
+= (A + !A)(A + B)
+= 1(A + B)
+= A + B
+
+e)
+A(!A + B)
+= A!A + AB
+= 0 + AB
+= AB
+
+f)
+(A + B)(A + !B)
+= A ? (B ? !B)
+= A + (B * !B)
+= A + (B!B)
+= A + 0
+= A
+
+g)
+AB + A!B
+= A ? (B ? !B)
+= A * (B + !B)
+= A(B + !B)
+= A(1)
+= A
+
+2.
+a)
+(feito em limnu)
+
+b)
+(feito em limnu)
+
+3.
+(feito em limnu)
+
+4.
+A  B  C | A xor B | (A xor B) xor C
+1  1  1 |    0    |        1
+0  1  1 |    1    |        0
+1  0  1 |    1    |        0
+0  0  1 |    0    |        1
+1  1  0 |    0    |        0
+0  1  0 |    1    |        1
+1  0  0 |    1    |        1
+0  0  0 |    0    |        0
+
+5.
+f = !(A + B) * (C + D) * !C
+
+6.
+a)
+MinTernos | MaxTernos
+!A!B!C    | A + B + C
+!A!BC     | A + B + !C
+!AB!C     | A + !B + C
+!ABC      | A + !B + !C
+A!B!C     | A + B + !C
+A!BC      | A + !B + !C
+AB!C      | !A + !B + C
+ABC       | !A + !B + !C
+
+Soma dos produtos:
+Y = !A!B!C + !AB!C + AB!C! + AB!C + ABC
+
+b)
+Produto das somas:
+Y = (A + B + !C) * (A + !B + !C) * (!A + !B + C)
+
+7.
+(ver resolução)
+
+Prova da universalidade do NAND:
+!X = !(X * X)
+X + Y = !!(X + Y) = !(!X * !Y)
+X * Y = !!(X * Y)
+Fórmulas mais complexas serão sempre aplicações destas
+
+Prova da universalidade do NOR:
+!X = !(X + X)
+X + Y = !!(X + Y)
+X * Y = !!(X * Y) = !(!X + !Y)
+Fórmulas mais complexas serão sempre aplicações destas
