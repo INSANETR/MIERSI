@@ -8,7 +8,7 @@
 "use strict"
 
 const serverURL = "http://twserver.alunos.dcc.fc.up.pt:8008/";
-const group = "1235";
+const group = "1237";
 
 var loginForm;
 var nickSlot;
@@ -250,7 +250,7 @@ function closePlayPassBlockerPopUp() {
 
 
 async function register(nick, pass) {
-    const data = JSON.stringify({ nick: nick, pass: pass });
+    const data = JSON.stringify({ "nick": nick, "pass": pass });
 
     await fetch(serverURL + "register", { method: "POST", body: data })
     .then(response => {
@@ -268,28 +268,26 @@ async function register(nick, pass) {
             errorSlot.innerText = "";
             errorSlot.appendChild(document.createTextNode("Wrong PassWord"));
         }
-
-        console.log(response);
     })
-    .catch(console.log);  
+    .catch(console.log);
 }
 
 async function join(group, nick, pass) {
-    const data = JSON.stringify({ group: group, nick: nick, pass: pass });
+    const data = JSON.stringify({ "group": group, "nick": nick, "pass": pass });
 
     await fetch(serverURL + "join", { method: "POST", body: data })
     .then(response => { return response.json(); })
     .then(response => {
-        game = response.game;
+        game = response.game; 
         color = response.color;
-        console.log(response);
+        
         update();
     })
     .catch(console.log);
 }
 
 async function leave(nick, pass, game) {
-    const data = JSON.stringify({ nick: nick, pass: pass, game: game });
+    const data = JSON.stringify({ "nick": nick, "pass": pass, "game": game });
 
     await fetch(serverURL + "leave", { method: "POST", body: data })
     .then(() => {
@@ -297,13 +295,14 @@ async function leave(nick, pass, game) {
         nick = "";
         pass = "";
         skip = false;
-        logout();
+        
+        logout();   
     })
     .catch(console.log);
 }
 
 async function notify(nick, pass, game, move) {
-    const data = JSON.stringify({ nick: nick, pass: pass, game: game, move: move });
+    const data = JSON.stringify({ "nick": nick, "pass": pass, "game": game, "move": move });
 
     await fetch(serverURL + "notify", { method: "POST", body: data })
     .then(response => { return response.json(); })
@@ -322,25 +321,20 @@ function update() {
 
         if (receivedData.turn != undefined)  { turn = receivedData.turn; }
 
-        if (receivedData.board != undefined) { 
-            board = receivedData.board;
-            placeDisks();
-        }
+        if (receivedData.board != undefined) { board = receivedData.board; placeDisks(); }
 
-        if (receivedData.count != undefined) { 
-            count = receivedData.count;
-            countDisks(); 
-        }
+        if (receivedData.count != undefined) { count = receivedData.count; countDisks(); }
 
-        if (receivedData.winner != undefined) {
-            winner = receivedData.winner;
-            leave(nick, pass, game);
-            eventSource.close();
+        if (receivedData.winner != undefined) { 
+            winner = receivedData.winner;  
+            
+            if (winner == nick) { eventSource.close(); } // check if right 
+
+            else if (winner != nick) { leave(nick, pass, game); } // check if right
+
             declareWinner();
         }
 
         prepareTurn();
-
-        console.log(event.data);
     }
 }
