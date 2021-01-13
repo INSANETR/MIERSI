@@ -3,36 +3,33 @@ import java.util.Scanner;
 public class DAA002 {
     final static Scanner inputScanner = new Scanner(System.in);
 
-    public static int getNumberDigitSum(int number) {
-        int numberDigitSum = 0;
+    public static short getSum(int n) {
+        short sum = 0;
 
-        do {
-            numberDigitSum += number % 10;
-            number /= 10;
-        } while (number > 0);
+        while (n != 0) {
+            sum += n % 10;
+            n /= 10;
+        }
 
-        return numberDigitSum;
+        return sum;
     }
 
-    public static int getNextNumber(int number, int digitSum) {
-        int numberDigitSum;
+    public static int getNextNumber(int n, short k) {
+        for (int i = n + 1; i <= 100000 + n; i++) {
+            if (getSum(i) == k) { return i; }
+        }
 
-        do {
-            number++;
-            numberDigitSum = getNumberDigitSum(number);
-        } while (numberDigitSum != digitSum);
-
-        return number;
+        return -1;
     }
 
     public static void main(String[] args) {
-        int testsNumber = inputScanner.nextInt();
+        short T = inputScanner.nextShort();
 
-        for (int i = 0; i < testsNumber; i++) {
-            int number   = inputScanner.nextInt();
-            int digitSum = inputScanner.nextInt();
+        for (short i = 0; i < T; i++) {
+            int n = inputScanner.nextInt();
+            short k = inputScanner.nextShort();
 
-            System.out.println(getNextNumber(number, digitSum));
-        } 
+            System.out.println(getNextNumber(n, k));
+        }
     }
 }
