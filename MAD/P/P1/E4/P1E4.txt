@@ -1,0 +1,12 @@
+varáveis de decisão:
+a = metros de tecido A
+b = metros de tecido B
+
+restrições:
+0.400a + 0.500b <= 100
+0.500a + 0.200b <= 100
+0.300a + 0.800b <= 120
+a, b >= 0
+
+objetivo:
+maximizar l = 500a + 200b

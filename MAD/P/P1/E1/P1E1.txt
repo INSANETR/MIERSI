@@ -1,0 +1,11 @@
+variáveis de decisão:
+a = toneladas de produto comprado à fábrica A
+b = toneladas de produto comprado à fábrica B
+
+restrições:
+a + b <= 5
+a <= 3
+a, b >= 0
+
+objetivos:
+maximizar l = 4a + 3.5b

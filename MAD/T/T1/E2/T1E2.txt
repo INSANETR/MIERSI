@@ -1,0 +1,15 @@
+variáveis de decisão:
+c = comprimento da caixa
+l = largura da caixa
+a = altura da caixa
+
+restrições:
+c <= 42
+c + l <= 72
+a <= l 
+l <= c
+c, l, a >= 0
+
+objetivo:
+maximizar v = c * l * a
+ 

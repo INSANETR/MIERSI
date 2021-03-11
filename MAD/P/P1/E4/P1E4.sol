@@ -1,21 +1,23 @@
-Problem:    D
-Rows:       4
+Problem:    P1E4
+Rows:       6
 Columns:    2
-Non-zeros:  6
+Non-zeros:  10
 Status:     OPTIMAL
-Objective:  L = 192000 (MAXimum)
+Objective:  L = 100000 (MAXimum)
 
    No.   Row name   St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 RA           NU            40                          40          4200 
-     2 RB           NU          6000             0          6000             4 
-     3 RC           B           1400             0          4000 
-     4 L            B         192000                             
+     1 R1           B             80                         100 
+     2 R2           NU           100                         100          1000 
+     3 R3           B             60                         120 
+     4 R4           B            200            -0               
+     5 R5           NL             0            -0                       < eps
+     6 L            B         100000                             
 
    No. Column name  St   Activity     Lower bound   Upper bound    Marginal
 ------ ------------ -- ------------- ------------- ------------- -------------
-     1 F            B           6000                             
-     2 B            B           1400                             
+     1 A            B            200                             
+     2 B            B              0                             
 
 Karush-Kuhn-Tucker optimality conditions:
 

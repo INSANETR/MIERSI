@@ -1,0 +1,12 @@
+variáveis de decisão:
+m = quantidade de mesas vendidas
+c = quantidade de cadeiras vendidas
+
+restrições:
+2m + 1c <= 100
+1m + 1c <= 80
+m <= 40
+m, c >= 0
+
+objetivo:
+maximizar l = 3m + 2c

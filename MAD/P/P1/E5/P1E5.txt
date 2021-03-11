@@ -1,0 +1,12 @@
+variáveis de decisão:
+f = toneladas de fitas produzidas
+b = toneladas de bobinas produzidas
+
+restrições:
+f <= 6000
+b <= 4000
+f/200 + b/140 <= 40
+f, b >= 0
+
+objetivo:
+maximizar l = 25f + 30b 

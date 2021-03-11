@@ -1,0 +1,19 @@
+variáveis de decisão:
+bife = prato de bife
+fran = prato de frango
+peix = prato de peixe
+hamb = prato de hamburger
+maca = prato de macarrão
+empa = prato de empada
+espa = prato de esparguete
+peru = prato de peru
+
+restrições:
+60*bife + 8*fran + 8*peix + 40*hamb + 15*maca + 70*empa + 25*espa + 60*peru >= 700
+20*bife + 0*fran + 10*peix + 40*hamb + 35*maca + 30*empa + 50*espa + 20*peru >= 700
+10*bife + 20*fran + 15*peix + 35*hamb + 15*maca + 15*empa + 25*espa + 15*peru >= 700
+15*bife + 20*fran + 10*peix + 10*hamb + 15*maca + 15*empa + 15*espa + 10*peru >= 700
+bife, fran, peix. hamb, maca, empa, espa, peru >= 0
+
+objetivo:
+minimizar p = 319*bife + 259*fran + 229*peix + 289*hamb + 189*maca + 199*empa + 199*espa + 249*peru
