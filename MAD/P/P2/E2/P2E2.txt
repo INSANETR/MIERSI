@@ -1,0 +1,30 @@
+(a)
+variáveis de decisão:
+x1: número de acres de milho
+x2: número de acres de trigo
+
+restrições:
+10x2 + 4x1 <= 40
+x1 + x2 <= 7
+10x1 >= 30
+x1, x2 >= 0
+
+objetivo:
+maximizar l: (4*25)x2 + (3*10)x1
+
+(b)
+iv.
+
+(c)
+variáveis de decisão:
+x1: número de galões de milho
+x2: número de galões de trigo
+
+restrições:
+10(x2/25) + 4(x1/10) <= 40
+x2/25 + x1/10 <= 7
+x1 >= 30
+x1, x2 >= 0
+
+objetivo:
+maximizar l: 4x2 + 3x1;
