@@ -1,0 +1,68 @@
+
+x11 + x12 + x13 <= 5000variáveis de decisão:
+ai: euros gastos a publicitar Gi (i = 1, 2, 3)
+xij: barris de Ci usados para produzir Gj (i, j = 1, 2, 3)
+
+restrições:
+x11 + x21 + x31 - 10a1 = 3000
+x12 + x22 + x32 - 10a2 = 2000
+x13 + x23 + x33 - 10a3 = 1000
+x21 + x22 + x23 <= 5000
+x31 + x32 + x33 <= 5000
+x11 + x21 + x31 + x21 + x22 + x23 + x31 + x32 + x33 <= 14000
+2x11 - 4x21 - 2x31 >= 0
+4x12 - 2x22 >= 0
+6x13 + 2x33 >= 0
+-0.005x11 + 0.01x21 + 0.02x31 <= 0
+-0.015x12 + 0.01x32 <= 0
+-0.005x13 + 0.01x23 + 0.02x33 <= 0
+
+
+objetivo: 
+21x11 + 11x12 + x13 + 31x21 + 21x22 + 11x23 + 41x31 + 31x32 + 21x33 - a1 - a2 - a3
+
+
+
+
+
+notas:
+
+barris C1 consumidos: x11 + x12 + x13
+barris C2 consumidos: x21 + x22 + x23
+barris C3 consumidos: x31 + x32 + x33
+
+barris G1 produzidos: x11 + x21 + x31
+barris G1 produzidos: x12 + x22 + x32
+barris G1 produzidos: x13 + x23 + x33
+
+ganhos das vendas de gasolina:
+70(x11 + x21 + x31) 
++ 60(x12 + x22 + x32) 
++ 50(x13 + x23 + x33)
+
+custos das compras de petróleo bruto:
+45(x11 + x12 + x13)
++ 35(x21 + x22 + x23)
++ 25(x31 + x32 + x33) 
+
+custos de produzir:
+4(x11 + x12 + x13 + x21 + x22 + x23 + x31 + x32 + x33)
+
+custos de publicitar:
+a1 + a2 + a3
+
+lucro =
+ganhos das vendas de gasolina
+- custos das compras de petróleo bruto
+- custos de pruduzir
+- custos de publicitar
+=
+70(x11 + x21 + x31) + 60(x12 + x22 + x32) + 50(x13 + x23 + x33)
+- (45(x11 + x12 + x13) + 35(x21 + x22 + x23) + 25(x31 + x32 + x33))
+- 4(x11 + x12 + x13 + x21 + x22 + x23 + x31 + x32 + x33)
+- (a1 + a2 + a3)
+=
+21x11 + 11x12 + x13
++ 31x21 + 21x22 + 11x23
++ 41x31 + 31x32 + 21x33
+- a1 - a2 - a3
