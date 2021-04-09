@@ -1,0 +1,87 @@
+(a)
+variáveis de decisão:
+x1: quantidade de produto 1 produzido
+x2: quantidade de produto 2 produzido
+
+restrições:
+x1 + 2*x2 <= 350
+2*x1 + x2 <= 400
+x1, x2 >= 0
+
+objetivo:
+maximizar l = 2*x1 + 2.5*x2
+
+nota:
+quantidade de MP usada =
+quantidade de MP usada por cada x1 + quantidade de MP usada por cada x2 =
+1*x1 + 2*x2 =
+x1 + 2*x2
+
+quantidade de horas usadas =
+quantidade de horas usadas por cada x1 + quantidade de horas usadas por cada x2 =
+2*x1 + 1*x2 =
+2*x1 + x2
+
+receita =
+preço de venda por cada x1 + preço de venda por cada x2 =
+7*x1 + 8*x2
+
+despesa =
+preço da quantidade de MP usada + preço da quantidade de horas usadas =
+2*(x1 + 2*x2) + 1.5*(2*x1 + x2) =
+2*x1 + 4*x2 + 3*x1 + 1.5*x2 =
+5*x1 + 5.5*x2
+
+lucro = 
+receita - despesa =
+7*x1 + 8*x2 - (5*x1 + 5.5*x2) =
+7*x1 + 8*x2 - 5*x1 - 5.5*x2 =
+2*x1 + 2.5*x2
+
+(b)
+forma standard:
+
+maximizar l = 2*x1 + 2.5*x2
+sujeito a     
+x1 + 2*x2 + s1 = 350
+2*x1 + x1 + s2 = 400
+x1, x2, s1, s2 >= 0 
+
+(c)
+1ª iteração:
+VNB = {x1, x2}
+VB  = {l, s1, s2}
+
+         |   l   |   x1   |   x2   |   s1   |   s2   |   rhs   | vb
+linha0   |   1   |   -2   |   -2.5 |   0    |   0    |   0     | l = 0 
+linha1   |   0   |   1    |   2    |   1    |   0    |   350   | s1 = 350 
+linha2   |   0   |   2    |   1    |   0    |   1    |   400   | s2 = 400
+
+2ª iteração:
+-> escolhemos x2 para entrar na base
+
+linha1: s1 = 350 - 2*x2 -> x2 <= 175 para que s1 >= 0
+linha2: s2 = 400 - x2   -> x2 <= 400 para que s2 >= 0
+
+VNB = {x1, s1}
+VB  = {l, x2, s2}
+
+         |   l   |   x1   |   x2   |   s1   |   s2   |   rhs   | vb
+linha0   |   1   |   -0.75|   0    |   1.25 |   0    |   437.5 | l = 437.5 
+linha1   |   0   |   0.5  |   1    |   0.5  |   0    |   175   | x2 = 175 
+linha2   |   0   |   1.5  |   0    |   -0.5 |   1    |   225   | s2 = 225
+
+
+3ª iteração:
+-> escolhemos x1 para entrar na base
+
+linha1: x2 = 175 - 0.5*x1 -> x1 <= 350 para que x2 >= 0
+linha2: s2 = 225 - 1.5*x1 -> x1 <= 150 para que s2 >= 0
+
+VNB = {s2, s1}
+VB  = {l, x2, x1}
+
+         |   l   |   x1   |   x2   |   s1   |   s2   |   rhs   | vb
+linha0   |   1   |   0    |   0    |   1    |   0.5  |   550   | l = 550 
+linha1   |   0   |   0    |   1    |   2/3  |   -1/3 |   100   | x2 = 100 
+linha2   |   0   |   1    |   0    |   -1/3 |   2/3  |   150   | x1 = 150

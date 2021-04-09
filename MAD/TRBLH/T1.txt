@@ -1,0 +1,21 @@
+"subject to L {X in Y}: Z;"
+-> esta linha certifica-se que a condição "Z" vai ser verificada para todas as instâncias "X" de "Y".
+-> no caso estudado estaremos a verificar a condição para os 12 meses existentes
+
+"sum {type in types} mercuryShipped[month, type] <= 1000;"
+-> ao somarmos as unidades de cada tipo enviadas para mercúrio teremos a quantidade total de unidades enviadas para esse planeta
+-> verificamos se o valor calculado é limitado por 1000
+-> esta condição vai ser verificada para os 12 meses como explicado anteriormente
+-> o mesmo processo é usado para os restantes planetas
+
+"sum {type in types} (mercuryShipped[month, type] + venusShipped[month, type] + marsShipped[month, type])/pLinesCosts[Cleaning, type] <= 1;"
+-> ao somarmos as unidades enviadas de um dado tipo para cada um dos planes sabemos as unidades enviadas desse tipo
+-> ao dividir esse valor pelo número máximo premitido para limpeza nesse mês obteremos a fração do mês que foi usada para a limpeza de marmelada desse tipo
+-> ao somarmos as frações dos diferentes tipos obtemos a fração do mês que foi dedicada a limpeza
+-> o mesmo processo é usado para as restantes linhas de produção  
+
+"maximize revenue: sum {month in months}(sum {type in types} mercuryShipped[month, type]*mercuryPrices[month, types] + venusShipped[month, type]*venusPrices[month, type] + marsShipped[month, type]*marsPrices[month, type]);"
+-> ao multiplicarmos as unidades enviadas para mercúrio com o preço dessas unidades no respetivo planeta para um dado tipo, obtemos o lucro fornecido por esse tipo no planeta
+-> somando os 3 planetas obtemos o lucro desse tipo
+-> somando os 3 tipos obtemos o lucro desse mês
+-> somando os 12 meses obtemos o lucro total
