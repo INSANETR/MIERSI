@@ -37,9 +37,8 @@ ProducedUnits[t, m] + EarthStashedUnits[t, m - 1] = sum {p in Planets} ShippedUn
 
 subject to OrderedShuttles {p in Planets, m in Months}: sum {t in Types} ShippedUnits[p, t, m] <= ShuttleCapacity*ChartedShuttles[p, m];
 
-subject to R1 {p in Planets, t in Types}: ColonyStashedUnits[p, t, 0] = 0;
-
-subject to R2 {p in Planets, t in Types, m in Months}: 
+subject to ColonyStashedUnitsMonthZero {p in Planets, t in Types}: ColonyStashedUnits[p, t, 0] = 0;
+subject to MonthlyShippedUnits {p in Planets, t in Types, m in Months}: 
 ShippedUnits[p, t, m] + ColonyStashedUnits[p, t, m - 1] = SoldUnits[p, t, m] + ColonyStashedUnits[p, t, m];   
 
 ### OBJECTIVE ###
