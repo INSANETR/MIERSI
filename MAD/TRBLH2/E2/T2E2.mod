@@ -40,7 +40,7 @@ subject to OrderedShuttles {p in Planets, m in Months}: sum {t in Types} Shipped
 subject to ColonyStashedUnitsMonthZero {p in Planets, t in Types}: ColonyStashedUnits[p, t, 0] = 0;
 subject to MonthlyShippedUnits {p in Planets, t in Types, m in Months}: 
 ShippedUnits[p, t, m] + ColonyStashedUnits[p, t, m - 1] = SoldUnits[p, t, m] + ColonyStashedUnits[p, t, m];   
-
+    
 ### OBJECTIVE ###
 
 maximize Revenue: 

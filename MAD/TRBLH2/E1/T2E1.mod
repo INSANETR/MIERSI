@@ -1,4 +1,4 @@
-### SETS ###
+### SETS ##
 
 set Planets;
 set Types;
