@@ -1,11 +1,11 @@
 option solver gurobi;
 
-var x >= 0; # número de vídeos com duas cabeças produzidos diariamente
-var y >= 0; # número de vídeos com quatro cabeças produzidos diariamente
+var x2 >= 0; # numero de videos com 2 cabecas de leitura produzidos
+var x4 >= 0; # numero de videos com 4 cabecas de leitura produzidos
 
-maximize P: 32*x + 8*y + x*y - 1/2*x*x - y*y;
+maximize p: 32*x2 + 8*x4 + x2*x4 - x2*x2/2 - x4*x4;
 
-s.t. R1: 5*x + 6*y <= 600;
-s.t. R2: x + 2*y <= 160;
+s.t. R1: 5*x2 + 6*x4 <= 600;
+s.t. R2:   x2 + 2*x4 <= 160;
 
-# P = 1312 (Not PL)
+# p* = 1312

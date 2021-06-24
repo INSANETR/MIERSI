@@ -1,11 +1,10 @@
 option solver gurobi;
 
-var a >= 0; # número de toneladas fornecidas pela fábrica A
-var b >= 0; # número de toneladas fornecidas pela fábrica B
+var xa >= 0, <= 3; # quantidade de produto encomendado a fabrica A (toneladas)
+var xb >= 0;       # quantidade de produto encomendado a fabrica B (toneladas)
 
-maximize P: 4*a + 3.5*b; 
+maximize p: 4*xa + 3.5*xb;
 
-s.t. R1: a + b <= 5;
-s.t. R2: a <= 3;
+s.t. R1: xa + xb <= 5;
 
-# P = 19
+# p* = 19

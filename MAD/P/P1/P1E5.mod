@@ -1,12 +1,10 @@
 option solver gurobi;
 
-var x >= 0; # horas a produzir fitas produzidas
-var y >= 0; # horas a produzir bobinas produzidas
+var xf >= 0, <= 6000; # quantidade de fitas produzida (toneladas)
+var xb >= 0, <= 4000; # quantidade de bobinas produzidas (toneladas)
 
-maximize P: 25*(200*x) + 30*(140*y);
+maximize p: 25*xf + 30*xb;
 
-s.t. R1: x + y <= 40;
-s.t. R2: 200*x <= 6000;
-s.t. R3: 140*y <= 4000;
+s.t. R1: xf/200 + xb/140 <= 40;
 
-# P = 192000
+# p* = 192000 

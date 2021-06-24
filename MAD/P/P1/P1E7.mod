@@ -1,12 +1,12 @@
 option solver gurobi;
 
-var x1 >= 0; # toneladas processadas pela fábrica 1
-var x2 >= 0; # toneladas processadas pela fábrica 2
-var x3 >= 0; # toneladas processadas pela fábrica 3
+var x1 >= 0; # toneladas de residuos processados pela fabrica 1
+var x2 >= 0; # toneladas de residuos processados pela fabrica 2
+var x3 >= 0; # toneladas de residuos processados pela fabrica 3
 
-minimize C: 15*x1 + 10*x2 + 20*x3;
+minimize p: 15*x1 + 10*x2 + 20*x3;
 
-s.t. R1: 0.1*x1 + 0.2*x2 + 0.4*x3 >= 30;
-s.t. R2: 0.45*x1 + 0.25*x2 + 0.3*x3 >= 40;
+s.t. R1: 0.10*x1 + 0.20*x2 + 0.40*x3 >= 30;
+s.t. R2: 0.45*x1 + 0.25*x2 + 0.30*x3 >= 40;
 
-# C = 1576.923077
+# p* = 923077
