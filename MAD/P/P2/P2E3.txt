@@ -1,0 +1,30 @@
+dinheiro em caixa a 1 de janeiro 
+= dinehiro em caixa a 1 de dezembro
++ debitos dos clientes
+- emprestimo bancario
+- renda de dezembro
+- custos de trabalho de dezembro
+= 10000 + 2000 - 1000 - 1000 - 50xd - 35xl
+= 10000 - 50xd - 35xl
+
+debitos dos clientes a 1 de janeiro
+= debitos dos clientes a 1 de dezembro
+- debitos dos clientes
++ vendas
+= 3000 - 2000 + 100xd + 90xl
+= 1000 + 100xd + 90xl
+
+valor do inventario a 1 de janeiro
+= valor do inventario a 1 de dezembro
++ inventario recebido
+- inventario utilizado
+= 7000 + 2000 - 30xd - 40xl
+= 9000 - 30xd - 40xl
+
+emprestimo bancario a 1 de janeiro 
+= emprestimo bancario a 1 de dezembro
+- emprestimo bancario
++ inventario recebido
+= 10000 - 1000 + 2000
+= 11000
+
